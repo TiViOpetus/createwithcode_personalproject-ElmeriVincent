@@ -113,8 +113,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3886958751932775790}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.34, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children:
   - {fileID: 963194228}
   m_Father: {fileID: 4072079728283801628}
@@ -211,8 +211,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3886958751932775784}
-  forceConst: 10
-  moveSpeed: 50
+  forceConst: 2
+  moveSpeed: 1
   rotationSpeed: 100
 --- !u!114 &1054644499
 MonoBehaviour:
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 4072079728283801628}
   m_Layer: 0
   m_Name: Snowboarder
-  m_TagString: Untagged
+  m_TagString: Snowboard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
