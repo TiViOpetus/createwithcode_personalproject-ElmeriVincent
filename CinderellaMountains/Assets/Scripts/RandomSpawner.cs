@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class RandomSpawner : MonoBehaviour
 {
-    public GameObject prefabs;
-	public float distance = 100f;
+	public GameObject snowball;
+	public float distance = 20f;
 
 	void Start ()
 	{
-		StartCoroutine(SpawnObject());
+		StartCoroutine(SpawnSnowball());
 	}
 
-	IEnumerator SpawnObject()
+	IEnumerator SpawnSnowball()
 	{
-		Vector3 pos = Random.onUnitSphere * 100f;
-		Instantiate(prefabs, pos, Quaternion.identity);
+		Vector3 pos = Random.onUnitSphere * 20f;
+		Instantiate(snowball, pos, Quaternion.identity);
 
-		yield return new WaitForSeconds(5f);
+		yield return new WaitForSeconds(1f);
 
-		StartCoroutine(SpawnObject());
+		StartCoroutine(SpawnSnowball());
 	}
 }

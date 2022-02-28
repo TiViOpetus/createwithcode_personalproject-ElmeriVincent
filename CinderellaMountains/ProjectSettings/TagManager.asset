@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Planet
   - Snowboard
+  - Snowball
   layers:
   - Default
   - TransparentFX
