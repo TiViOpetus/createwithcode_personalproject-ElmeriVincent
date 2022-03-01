@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class SnowSplash : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    public ParticleSystem splashParticle;
+
+    void Update() 
     {
-        if(collision.gameObject.tag == "Planet")
+    
+    }
+
+    public void OnCollisionEnter(Collision col)
+    {
+        if(col.gameObject.CompareTag("Planet"))
         {
             Destroy(gameObject, 1f);
-        }
-
-        if(collision.gameObject.tag == "Snowboard")
-        {
-            //if snowballs hits the snowboard then
-            //Game Over
-            print("game over");
+            splashParticle.Play();
         }
     }
 }
