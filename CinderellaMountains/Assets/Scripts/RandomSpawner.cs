@@ -5,7 +5,7 @@ using UnityEngine;
 public class RandomSpawner : MonoBehaviour
 {
 	public GameObject snowball;
-	public float distance = 20f;
+	public float distance = 100f;
 
 	void Start ()
 	{
@@ -17,7 +17,7 @@ public class RandomSpawner : MonoBehaviour
 		Vector3 pos = Random.onUnitSphere * 20f;
 		Instantiate(snowball, pos, Quaternion.identity);
 
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(2f);
 
 		StartCoroutine(SpawnSnowball());
 	}

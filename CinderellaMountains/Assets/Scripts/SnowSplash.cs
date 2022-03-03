@@ -15,8 +15,8 @@ public class SnowSplash : MonoBehaviour
     {
         if(col.gameObject.CompareTag("Planet"))
         {
-            Destroy(gameObject, 1f);
             splashParticle.Play();
+            Destroy(gameObject, 0.2f);
         }
     }
 }
