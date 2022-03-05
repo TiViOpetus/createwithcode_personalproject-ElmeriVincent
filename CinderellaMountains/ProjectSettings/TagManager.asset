@@ -6,9 +6,8 @@ TagManager:
   tags:
   - Ground
   - Planet
-  - Snowboard
-  - Snowball
-  - Tree
+  - Obstacle
+  - Snowboarder
   layers:
   - Default
   - TransparentFX
