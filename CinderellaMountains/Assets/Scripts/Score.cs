@@ -6,7 +6,7 @@ public class Score : MonoBehaviour
     [SerializeField] private Text score;
 
     private float scoreAmount;
-    public float pointIncreased;
+    [SerializeField] public float pointIncreased;
 
     void Start()
     {

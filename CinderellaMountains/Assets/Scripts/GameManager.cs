@@ -3,22 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private GameOverScreen GameOverScreen;
     bool gameHasEnded = false;
-
-    [SerializeField] private float restartDelay = 3f;
 
     public void GameOver()
     {
         if(gameHasEnded == false)
         {
             gameHasEnded = true;
-            Debug.Log("Game over!");
-            //Invoke("Restart", restartDelay);
+            GameOverScreen.Setup();
         }
-    }
-
-    void Restart()
-    {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
