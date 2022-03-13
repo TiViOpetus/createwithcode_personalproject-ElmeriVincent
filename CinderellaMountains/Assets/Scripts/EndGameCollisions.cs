@@ -2,20 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollisionManager : MonoBehaviour
+public class EndGameCollisions : MonoBehaviour
 {
     private SnowboardMovement endMovement;
     private Score endScore;
-    private RandomSpawner endSpawning;
+    private SnowballSpawner endSpawning;
 
     void Start()
     {
         endMovement = GetComponent<SnowboardMovement>();
         endScore = GetComponent<Score>();
-        endSpawning = GetComponent<RandomSpawner>();
+        endSpawning = GetComponent<SnowballSpawner>();
     }
 
-    //Ending action if colliding againts an obstacle
+    //Game ends when colliding with an obstacle
+
     private void OnCollisionEnter(Collision collision)
 		{
 			if(collision.gameObject.CompareTag("Planet"))
@@ -25,7 +26,7 @@ public class CollisionManager : MonoBehaviour
             else if(collision.gameObject.CompareTag("Obstacle"))
             {
                 endMovement.gameOver = true;
-                endScore.pointIncreased = 0;
+                endScore.endGame = true;
                 endSpawning.spawning = false;
                 FindObjectOfType<GameManager>().GameOver();
             }

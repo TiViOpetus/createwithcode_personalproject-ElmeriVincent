@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomSpawner : MonoBehaviour
+public class SnowballSpawner : MonoBehaviour
 {
-	public GameObject snowball;
-	[SerializeField] private float distance = 100f;
-
+	[SerializeField] private GameObject snowball;
 	public bool spawning = true;
+
+	private float spawnDistance = 3f;
 
 	void Start ()
 	{
@@ -18,7 +18,7 @@ public class RandomSpawner : MonoBehaviour
 	{
 		if(spawning == true)
 		{
-			Vector3 pos = Random.onUnitSphere * 20f;
+			Vector3 pos = Random.onUnitSphere * spawnDistance;
 			Instantiate(snowball, pos, Quaternion.identity);
 
 			yield return new WaitForSeconds(2f);

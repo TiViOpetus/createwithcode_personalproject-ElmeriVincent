@@ -15,8 +15,8 @@ public class SnowboardMovement : MonoBehaviour
 		public bool onGround = true;
 
 		[Header("Speed Control")]
-		[SerializeField] private float moveSpeed = 20f;
-		[SerializeField] private float rotationSpeed = 100f;
+		[SerializeField] private float moveSpeed = 2f;
+		[SerializeField] private float rotationSpeed = 300f;
 		private float rotation;
 
         public bool gameOver = false;
@@ -26,14 +26,8 @@ public class SnowboardMovement : MonoBehaviour
             Ini();
         }
 
-		// FOR DEBUGGING JUMPING/GRAVITY 
         void Update()
         {
-            // Raycast (doesn't affect gameplay)
-            if (Physics.Raycast(transform.position, -transform.up, out hit))
-            {
-                Debug.DrawLine(transform.position, hit.point, Color.cyan);
-            }
             Jump();
         }
 
