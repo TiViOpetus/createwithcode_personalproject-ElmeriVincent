@@ -8,6 +8,7 @@ TagManager:
   - Planet
   - Obstacle
   - Snowboarder
+  - Ramp
   layers:
   - Default
   - TransparentFX
