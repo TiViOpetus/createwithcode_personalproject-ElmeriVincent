@@ -7,7 +7,8 @@ public class Score : MonoBehaviour
     private string scoreText;
 
     private float scoreAmount;
-    [SerializeField] public float pointIncreased;
+    private float pointIncreased;
+    private int addPoints = 20;
 
     public bool endGame = false;
 
@@ -17,7 +18,7 @@ public class Score : MonoBehaviour
         pointIncreased = 10f;
     }
 
-    // Displays the meters you have traveled.
+    // Displays the score
 
     void Update()
     {
@@ -25,16 +26,16 @@ public class Score : MonoBehaviour
         {
             scoreText = score.text = (int)scoreAmount + " M";
             scoreAmount += pointIncreased * Time.deltaTime;
-
-            IncreaseLv1();
         }
     }
 
-    void IncreaseLv1() 
+    // When using a ramp player receives more points
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if((int)scoreAmount == 250)
+        if(collision.gameObject.CompareTag("Ramp") && endGame == false)
         {
-            print("WOW 250M!");
+            scoreAmount += addPoints;
         }
     }
 }
