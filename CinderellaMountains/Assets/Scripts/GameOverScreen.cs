@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScreen : MonoBehaviour
 {
-    [SerializeField] private Text score;
+    [SerializeField] public Text score;
 
     // Activates GameOver Screen
-    public void Setup() {
+    public void Setup(int scoreAmount) {
         gameObject.SetActive(true);
+        score.text = scoreAmount.ToString();
     }
 
     // Restarts the game

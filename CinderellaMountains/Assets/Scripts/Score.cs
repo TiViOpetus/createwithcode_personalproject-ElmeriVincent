@@ -6,11 +6,13 @@ public class Score : MonoBehaviour
     [SerializeField] private Text score;
     private string scoreText;
 
-    private float scoreAmount;
+    public float scoreAmount;
     private float pointIncreased;
     private int addPoints = 20;
 
     public bool endGame = false;
+
+    public GameOverScreen displayScore;
 
     void Awake() 
     {
