@@ -11,7 +11,7 @@ public class GameOverScreen : MonoBehaviour
     // Activates GameOver Screen
     public void Setup(int scoreAmount) {
         gameObject.SetActive(true);
-        score.text = scoreAmount.ToString();
+        score.text = scoreAmount.ToString()+" m";
     }
 
     // Restarts the game

@@ -3,16 +3,14 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    [SerializeField] private Text score;
-    private string scoreText;
+    public Text score;
+    public string scoreText;
 
     public float scoreAmount;
     private float pointIncreased;
     private int addPoints = 20;
 
     public bool endGame = false;
-
-    public GameOverScreen displayScore;
 
     void Awake() 
     {

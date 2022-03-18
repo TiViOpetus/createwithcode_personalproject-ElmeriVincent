@@ -9,12 +9,7 @@ public class SnowballSpawner : MonoBehaviour
 
 	private float spawnDistance = 3f;
 
-	void Start ()
-	{
-		StartCoroutine(SpawnSnowball());
-	}
-
-	IEnumerator SpawnSnowball()
+	public IEnumerator SpawnSnowball()
 	{
 		if(spawning == true)
 		{

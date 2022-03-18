@@ -23,12 +23,17 @@ public class EndGameCollisions : MonoBehaviour
             {
                 endMovement.onGround = true;
             }
+
+            //When colliding, stop the following:
             else if(collision.gameObject.CompareTag("Obstacle"))
             {
                 endMovement.gameOver = true;
                 endScore.endGame = true;
                 stopSnowball.spawning = false;
                 FindObjectOfType<GameManager>().GameOver();
+
+                //hides the score that is shown while playing
+                endScore.score.gameObject.SetActive(false);
             }
         }
 }
