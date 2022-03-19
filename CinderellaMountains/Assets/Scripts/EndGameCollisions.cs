@@ -7,12 +7,14 @@ public class EndGameCollisions : MonoBehaviour
     private SnowboardMovement endMovement;
     private Score endScore;
     private SnowballSpawner stopSnowball;
+    private RampSpawner stopRampSpawn;
 
     void Start()
     {
         endMovement = GetComponent<SnowboardMovement>();
         endScore = GetComponent<Score>();
         stopSnowball = GetComponent<SnowballSpawner>();
+        stopRampSpawn = GetComponent<RampSpawner>();
     }
 
     //Game ends when colliding with an obstacle
@@ -30,6 +32,7 @@ public class EndGameCollisions : MonoBehaviour
                 endMovement.gameOver = true;
                 endScore.endGame = true;
                 stopSnowball.spawning = false;
+                stopRampSpawn.spawning = false;
                 FindObjectOfType<GameManager>().GameOver();
 
                 //hides the score that is shown while playing

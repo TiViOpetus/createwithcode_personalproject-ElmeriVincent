@@ -7,14 +7,9 @@ public class RampSpawner : MonoBehaviour
 	[SerializeField] private GameObject ramp;
 	public bool spawning = true;
 
-	private float spawnDistance = -1f;
+	private float spawnDistance = 0f;
 
-	void Start ()
-	{
-		StartCoroutine(SpawnRamp());
-	}
-
-	IEnumerator SpawnRamp()
+	public IEnumerator SpawnRamp()
 	{
 		if(spawning == true)
 		{
