@@ -11,14 +11,14 @@ public class Countdown : MonoBehaviour
     private SnowboardMovement startMovement;
     private Score startScore;
     private SnowballSpawner startSnowball;
-    private RampSpawner startRampSpawner;
+    private ItemSpawner startRampSpawner;
 
     private void Start()
     {
         startMovement = GetComponent<SnowboardMovement>();
         startScore = GetComponent<Score>();
         startSnowball = GetComponent<SnowballSpawner>();
-        startRampSpawner = GetComponent<RampSpawner>();
+        startRampSpawner = GetComponent<ItemSpawner>();
         StartCoroutine(CountdownToStart());
     }
 

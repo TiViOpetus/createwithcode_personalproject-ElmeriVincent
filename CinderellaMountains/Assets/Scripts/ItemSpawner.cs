@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RampSpawner : MonoBehaviour
+public class ItemSpawner : MonoBehaviour
 {
 	[SerializeField] private GameObject ramp;
 	public bool spawning = true;
 
-	private float spawnDistance = 0f;
+	private float spawnDistance = 1f;
 
 	public IEnumerator SpawnRamp()
 	{

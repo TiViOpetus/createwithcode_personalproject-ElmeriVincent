@@ -7,14 +7,14 @@ public class EndGameCollisions : MonoBehaviour
     private SnowboardMovement endMovement;
     private Score endScore;
     private SnowballSpawner stopSnowball;
-    private RampSpawner stopRampSpawn;
+    private ItemSpawner stopRampSpawn;
 
     void Start()
     {
         endMovement = GetComponent<SnowboardMovement>();
         endScore = GetComponent<Score>();
         stopSnowball = GetComponent<SnowballSpawner>();
-        stopRampSpawn = GetComponent<RampSpawner>();
+        stopRampSpawn = GetComponent<ItemSpawner>();
     }
 
     //Game ends when colliding with an obstacle

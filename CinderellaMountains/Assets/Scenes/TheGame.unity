@@ -1401,25 +1401,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 705986303}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 204a8432ad3828e40a3edee4e84fc32e, type: 3}
+  m_Script: {fileID: 11500000, guid: 342bf04490a10eb4ab46f4c95e2d9c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ramp: {fileID: 9141901841789582206, guid: ba86eca3bebe4774a87c81d2b5b212ff, type: 3}
+  ramp: {fileID: 1000011501826600, guid: b34bf25cecb5fc24c91de3edea19cb13, type: 3}
   spawning: 1
---- !u!114 &705986313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 705986303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68c3a735a2e5c4743a075c6008ccb3c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countdownTimer: 3
-  displayCountdown: {fileID: 1642223495}
 --- !u!4 &707285958 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3770805684209581099, guid: 96dc3faca9b95a7419d35eced9acc8a5, type: 3}
@@ -3709,50 +3695,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 476522078, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
-      propertyPath: m_Color.b
-      value: 0.764151
+    - target: {fileID: 705986312, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
+      propertyPath: ramp
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 476522078, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
-      propertyPath: m_Color.g
-      value: 0.70459044
-      objectReference: {fileID: 0}
-    - target: {fileID: 476522078, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
-      propertyPath: m_Color.r
-      value: 0.5803222
-      objectReference: {fileID: 0}
+    - target: {fileID: 705986313, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
+      propertyPath: displayCountdown
+      value: 
+      objectReference: {fileID: 1642223495}
     - target: {fileID: 1240981800, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
       propertyPath: score
       value: 
       objectReference: {fileID: 1619677463}
-    - target: {fileID: 1240981800, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
-      propertyPath: addPoints
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1240981800, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1240981801, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
-      propertyPath: snowball
-      value: 
-      objectReference: {fileID: 7129958363136861947, guid: 8091709253f3d9b4cb4225a5eeae9099, type: 3}
-    - target: {fileID: 721657011889317347, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 721657011889317347, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 721657012337239393, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
-      propertyPath: moveSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 721657012337239393, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
-      propertyPath: rotationSpeed
-      value: 250
-      objectReference: {fileID: 0}
     - target: {fileID: 721657013149525892, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3801,19 +3755,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
-    - target: {fileID: 721657013149760420, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 721657013157005418, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 9e22852b9da8d834bab164ef1034a932, type: 2}
-    - target: {fileID: 721657013157005418, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 705986312, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
 --- !u!1001 &8000534630364982088
 PrefabInstance:

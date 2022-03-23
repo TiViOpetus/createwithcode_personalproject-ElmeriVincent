@@ -9,6 +9,7 @@ TagManager:
   - Obstacle
   - Snowboarder
   - Ramp
+  - Item
   layers:
   - Default
   - TransparentFX

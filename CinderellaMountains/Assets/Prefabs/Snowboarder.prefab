@@ -42,7 +42,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
+  m_Color: {r: 0.5803222, g: 0.70459044, b: 0.764151, a: 1}
   m_Intensity: 0.8
   m_Range: 100
   m_SpotAngle: 179
@@ -119,7 +119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721657011889317348}
   m_LocalRotation: {x: 0.5, y: -0, z: -0, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: 5.73, z: -5.73}
+  m_LocalPosition: {x: 0, y: 4.37, z: -4.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721657013149525892}
@@ -254,9 +254,11 @@ GameObject:
   - component: {fileID: 1240981799}
   - component: {fileID: 1240981800}
   - component: {fileID: 1240981801}
+  - component: {fileID: 705986312}
+  - component: {fileID: 705986313}
   m_Layer: 0
   m_Name: Snowboarder
-  m_TagString: Untagged
+  m_TagString: Snowboarder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -290,7 +292,7 @@ Animator:
   m_GameObject: {fileID: 721657013149760420}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 02dd6406ed1ebc248b2fafd0485e0de9, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9e22852b9da8d834bab164ef1034a932, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -344,7 +346,7 @@ MonoBehaviour:
   forceConst: 2
   onGround: 1
   moveSpeed: 1
-  rotationSpeed: 150
+  rotationSpeed: 250
   gameOver: 0
 --- !u!114 &721657012337239392
 MonoBehaviour:
@@ -383,7 +385,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 0}
-  pointIncreased: 10
+  scoreText: 
+  scoreAmount: 0
+  endGame: 0
 --- !u!114 &1240981801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,8 +401,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snowball: {fileID: 7129958363136861947, guid: 8091709253f3d9b4cb4225a5eeae9099, type: 3}
-  distance: 100
   spawning: 1
+--- !u!114 &705986312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721657013149760420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 204a8432ad3828e40a3edee4e84fc32e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ramp: {fileID: 9141901841789582206, guid: ba86eca3bebe4774a87c81d2b5b212ff, type: 3}
+  spawning: 1
+--- !u!114 &705986313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721657013149760420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68c3a735a2e5c4743a075c6008ccb3c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownTimer: 3
+  displayCountdown: {fileID: 0}
 --- !u!1 &721657013149760422
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,6 +1253,10 @@ PrefabInstance:
     - target: {fileID: 3081249570216863119, guid: d62bd80afc6c31f478115fe9f01e657e, type: 3}
       propertyPath: m_Name
       value: Snowboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 3081249570216863119, guid: d62bd80afc6c31f478115fe9f01e657e, type: 3}
+      propertyPath: m_TagString
+      value: Snowboarder
       objectReference: {fileID: 0}
     - target: {fileID: 3081249570217094285, guid: d62bd80afc6c31f478115fe9f01e657e, type: 3}
       propertyPath: m_RootOrder
