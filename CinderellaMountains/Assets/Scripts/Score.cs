@@ -29,11 +29,11 @@ public class Score : MonoBehaviour
         }
     }
 
-    // When using a ramp player receives more points
+    // When collecting an item increase points;
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Ramp") && endGame == false)
+        if(collision.gameObject.CompareTag("Item") && endGame == false)
         {
             scoreAmount += addPoints;
         }

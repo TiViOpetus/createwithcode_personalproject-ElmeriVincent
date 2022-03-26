@@ -11,14 +11,14 @@ public class Countdown : MonoBehaviour
     private SnowboardMovement startMovement;
     private Score startScore;
     private SnowballSpawner startSnowball;
-    private ItemSpawner startRampSpawner;
+    private ItemSpawner startItemSpawner;
 
     private void Start()
     {
         startMovement = GetComponent<SnowboardMovement>();
         startScore = GetComponent<Score>();
         startSnowball = GetComponent<SnowballSpawner>();
-        startRampSpawner = GetComponent<ItemSpawner>();
+        startItemSpawner = GetComponent<ItemSpawner>();
         StartCoroutine(CountdownToStart());
     }
 
@@ -27,7 +27,7 @@ public class Countdown : MonoBehaviour
         startMovement.gameOver = true;
         startScore.endGame = true;
         startSnowball.spawning = false;
-        startRampSpawner.spawning = false;
+        startItemSpawner.spawning = false;
 
         while((countdownTimer > 0))
         {
@@ -43,8 +43,8 @@ public class Countdown : MonoBehaviour
         startMovement.gameOver = false;
         startScore.endGame = false;
         startSnowball.spawning = true;
-        startRampSpawner.spawning = true;
-        StartCoroutine(startRampSpawner.SpawnRamp());
+        startItemSpawner.spawning = true;
+        StartCoroutine(startItemSpawner.SpawnItem());
         StartCoroutine(startSnowball.SpawnSnowball());
 
         yield return new WaitForSeconds(1f);

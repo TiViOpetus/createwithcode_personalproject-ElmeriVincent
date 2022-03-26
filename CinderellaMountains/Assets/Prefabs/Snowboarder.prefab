@@ -254,7 +254,6 @@ GameObject:
   - component: {fileID: 1240981799}
   - component: {fileID: 1240981800}
   - component: {fileID: 1240981801}
-  - component: {fileID: 705986312}
   - component: {fileID: 705986313}
   m_Layer: 0
   m_Name: Snowboarder
@@ -278,7 +277,6 @@ Transform:
   - {fileID: 721657013149525944}
   - {fileID: 721657011889317347}
   - {fileID: 476522077}
-  - {fileID: 2360197445971212726}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -372,6 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0006bf157635144aac80e6937c77e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puff: {fileID: 0}
 --- !u!114 &1240981800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,20 +400,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snowball: {fileID: 7129958363136861947, guid: 8091709253f3d9b4cb4225a5eeae9099, type: 3}
-  spawning: 1
---- !u!114 &705986312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 721657013149760420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 204a8432ad3828e40a3edee4e84fc32e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ramp: {fileID: 9141901841789582206, guid: ba86eca3bebe4774a87c81d2b5b212ff, type: 3}
   spawning: 1
 --- !u!114 &705986313
 MonoBehaviour:
@@ -1105,7 +1090,8 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 0.0053785145, y: 0.11444951, z: -0.082}
   m_LocalScale: {x: 100, y: 100, z: 100}
-  m_Children: []
+  m_Children:
+  - {fileID: 2360197445971212726}
   m_Father: {fileID: 721657013149525892}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1248,7 +1234,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 721657013149525892}
+    m_TransformParent: {fileID: 721657013149525944}
     m_Modifications:
     - target: {fileID: 3081249570216863119, guid: d62bd80afc6c31f478115fe9f01e657e, type: 3}
       propertyPath: m_Name
@@ -1260,27 +1246,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3081249570217094285, guid: d62bd80afc6c31f478115fe9f01e657e, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3081249570217094285, guid: d62bd80afc6c31f478115fe9f01e657e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0033333332
+      objectReference: {fileID: 0}
+    - target: {fileID: 3081249570217094285, guid: d62bd80afc6c31f478115fe9f01e657e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0033333339
+      objectReference: {fileID: 0}
+    - target: {fileID: 3081249570217094285, guid: d62bd80afc6c31f478115fe9f01e657e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0033333339
       objectReference: {fileID: 0}
     - target: {fileID: 3081249570217094285, guid: d62bd80afc6c31f478115fe9f01e657e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.000053785145
       objectReference: {fileID: 0}
     - target: {fileID: 3081249570217094285, guid: d62bd80afc6c31f478115fe9f01e657e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.0008199998
       objectReference: {fileID: 0}
     - target: {fileID: 3081249570217094285, guid: d62bd80afc6c31f478115fe9f01e657e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.0011444951
       objectReference: {fileID: 0}
     - target: {fileID: 3081249570217094285, guid: d62bd80afc6c31f478115fe9f01e657e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071067
       objectReference: {fileID: 0}
     - target: {fileID: 3081249570217094285, guid: d62bd80afc6c31f478115fe9f01e657e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3081249570217094285, guid: d62bd80afc6c31f478115fe9f01e657e, type: 3}
       propertyPath: m_LocalRotation.y

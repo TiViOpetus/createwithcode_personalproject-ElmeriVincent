@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class SnowSplash : MonoBehaviour
 {
-    public ParticleSystem splashParticle;
+    public GameObject splashParticle;
 
     public void OnCollisionEnter(Collision col)
     {
         if(col.gameObject)
         {
-            splashParticle.Play();
-            Destroy(gameObject, 0.2f);
+            Destroy(gameObject);
+            SplashParticleEffect();
         }
+    }
+
+    // Plays the particle effect at the position where it collides
+    void SplashParticleEffect ()
+    {
+        Instantiate(splashParticle, transform.position, splashParticle.transform.rotation);
     }
 }

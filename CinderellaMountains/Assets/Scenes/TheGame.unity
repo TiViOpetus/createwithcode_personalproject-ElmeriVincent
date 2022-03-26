@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0028397683, g: 0.034130838, b: 0.12196135, a: 1}
+  m_IndirectSpecularColor: {r: 0.2423104, g: 0.12487718, b: 0.86010677, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -704,6 +704,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3770805684209581099, guid: 96dc3faca9b95a7419d35eced9acc8a5, type: 3}
   m_PrefabInstance: {fileID: 1416186389}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &335598671 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 721657013149760472, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
+  m_PrefabInstance: {fileID: 721657011746227119}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &358431858
 PrefabInstance:
@@ -1404,7 +1409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 342bf04490a10eb4ab46f4c95e2d9c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ramp: {fileID: 1000011501826600, guid: b34bf25cecb5fc24c91de3edea19cb13, type: 3}
+  item: {fileID: 1000011501826600, guid: b34bf25cecb5fc24c91de3edea19cb13, type: 3}
   spawning: 1
 --- !u!4 &707285958 stripped
 Transform:
@@ -2745,6 +2750,7 @@ GameObject:
   - component: {fileID: 1619677462}
   - component: {fileID: 1619677464}
   - component: {fileID: 1619677463}
+  - component: {fileID: 1619677465}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -2784,7 +2790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.9554755, b: 0.4009434, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.8627451, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2793,10 +2799,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 354eac9b93f62d14cb1cae9bad22121c, type: 3}
-    m_FontSize: 14
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2813,6 +2819,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619677461}
   m_CullTransparentMesh: 1
+--- !u!114 &1619677465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619677461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1642223492
 GameObject:
   m_ObjectHideFlags: 0
@@ -2848,7 +2869,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -271, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1642223494
@@ -2863,7 +2884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.1263169, g: 0.041162338, b: 0.23584908, a: 1}
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
 --- !u!114 &1642223495
@@ -2879,7 +2900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.95686275, b: 0.4, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.8646321, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2888,11 +2909,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 70
+    m_FontSize: 80
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 70
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 1
@@ -3703,6 +3724,14 @@ PrefabInstance:
       propertyPath: displayCountdown
       value: 
       objectReference: {fileID: 1642223495}
+    - target: {fileID: 1240981799, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 335598671}
+    - target: {fileID: 1240981799, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
+      propertyPath: puff
+      value: 
+      objectReference: {fileID: 4679216752677439934, guid: 3afd909e5e906b84a882213085e205ff, type: 3}
     - target: {fileID: 1240981800, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
       propertyPath: score
       value: 
@@ -3754,6 +3783,14 @@ PrefabInstance:
     - target: {fileID: 721657013149760420, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
       propertyPath: m_Name
       value: GameController
+      objectReference: {fileID: 0}
+    - target: {fileID: 721657013149760472, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 721657013152872106, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 705986312, guid: 634f24e9dcb72b146bc059c5c5dff4e2, type: 3}
