@@ -12,12 +12,13 @@ public class SnowSplash : MonoBehaviour
         {
             Destroy(gameObject);
             SplashParticleEffect();
+            Destroy(splashParticle, 3f);
         }
     }
 
     // Plays the particle effect at the position where it collides
     void SplashParticleEffect ()
     {
-        Instantiate(splashParticle, transform.position, splashParticle.transform.rotation);
+        splashParticle = Instantiate(splashParticle, transform.position, splashParticle.transform.rotation);
     }
 }

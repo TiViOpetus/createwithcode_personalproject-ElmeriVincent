@@ -16,12 +16,13 @@ public class ItemDestroy : MonoBehaviour
         {
             Destroy(gameObject);
             ItemParticleEffect();
+            Destroy(itemParticle, 3f);
         }
     }
 
     // Plays the Particle Effect when item collides with player
     void ItemParticleEffect ()
     {
-        Instantiate(itemParticle, transform.position, itemParticle.transform.rotation);
+        itemParticle = Instantiate(itemParticle, transform.position, itemParticle.transform.rotation);
     }
 }
