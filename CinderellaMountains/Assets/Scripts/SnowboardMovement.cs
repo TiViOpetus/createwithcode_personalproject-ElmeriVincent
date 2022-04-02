@@ -15,8 +15,8 @@ public class SnowboardMovement : MonoBehaviour
 		public bool onGround = true;
 
 		[Header("Speed Control")]
-		[SerializeField] private float moveSpeed = 2f;
-		[SerializeField] private float rotationSpeed = 300f;
+		[SerializeField] private float moveSpeed = 1f;
+		[SerializeField] private float rotationSpeed = 150f;
 		private float rotation;
 
         public bool gameOver = false;

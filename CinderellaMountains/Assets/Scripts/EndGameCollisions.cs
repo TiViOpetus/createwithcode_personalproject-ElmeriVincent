@@ -8,6 +8,7 @@ public class EndGameCollisions : MonoBehaviour
     private Score endScore;
     private SnowballSpawner stopSnowball;
     private ItemSpawner stopItemSpawn;
+    private ObstacleSpawner stopObstacleSpawn;
 
     public GameObject puff;
     public GameObject mesh;
@@ -18,6 +19,7 @@ public class EndGameCollisions : MonoBehaviour
         endScore = GetComponent<Score>();
         stopSnowball = GetComponent<SnowballSpawner>();
         stopItemSpawn = GetComponent<ItemSpawner>();
+        stopObstacleSpawn = GetComponent<ObstacleSpawner>();
     }
 
     //Game ends when colliding with an obstacle
@@ -29,13 +31,14 @@ public class EndGameCollisions : MonoBehaviour
                 endMovement.onGround = true;
             }
 
-            //When colliding, stop the following:
+            //When colliding, do the following:
             else if(collision.gameObject.CompareTag("Obstacle"))
             {
                 endMovement.gameOver = true;
                 endScore.endGame = true;
                 stopSnowball.spawning = false;
                 stopItemSpawn.spawning = false;
+                stopObstacleSpawn.spawning = false;
                 Destroy(mesh);
                 SplashParticleEffect();
                 FindObjectOfType<GameManager>().GameOver();

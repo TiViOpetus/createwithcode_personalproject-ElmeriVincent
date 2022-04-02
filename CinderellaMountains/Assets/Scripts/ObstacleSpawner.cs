@@ -4,32 +4,28 @@ using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour
 {
-	[SerializeField] private GameObject[] obstacles;
-    [SerializeField] private int treeMax = 30;
+	[SerializeField] private GameObject log;
+	public bool spawning = true;
 
-	private bool spawning = true;
-    private float radius = 1;
+	private float spawnDistance = 1f;
+	public float spawnSpeed = 12f;
 
-	void Start ()
-	{
-		SpawnObstacle(treeMax);
-	}
-
-    //Spawns obstacles around a sphere
-	void SpawnObstacle(int obstaclesToSpawn)
+	// spawns a log at a random spot around a sphere.
+	// spawn speed is adjusted at Score script.
+	public IEnumerator SpawnLog()
 	{
 		if(spawning == true)
 		{
-            for(int i = 0; i < obstaclesToSpawn; i++)
-            {
-                Vector3 pos = Random.onUnitSphere * radius;
-                int spawnIndex = Random.Range(0, obstacles.Length);
-                Instantiate(obstacles[spawnIndex], pos, Quaternion.identity);
-            }
+			Vector3 pos = Random.onUnitSphere * spawnDistance;
+			Instantiate(log, pos, Quaternion.identity);
+
+			yield return new WaitForSeconds(spawnSpeed);
+
+			StartCoroutine(SpawnLog());
 		}
 		else if(spawning == false)
 		{
-			spawning = false;
+			StopCoroutine(SpawnLog());
 		}
 	}
 }
