@@ -11,7 +11,7 @@ public class GameOverScreen : MonoBehaviour
     // Activates GameOver Screen
     public void Setup(int scoreAmount) {
         gameObject.SetActive(true);
-        score.text = scoreAmount.ToString()+" m";
+        score.text = scoreAmount.ToString()+" SP";
     }
 
     // Restarts the game
@@ -19,10 +19,12 @@ public class GameOverScreen : MonoBehaviour
         SceneManager.LoadScene("TheGame");
     }
 
+    // Takes player back to main screen
     public void MainScreenButton() {
         SceneManager.LoadScene("MainMenu");
     }
 
+    // Starts the game when player press the start button.
     public void StartGameButton() {
         SceneManager.LoadScene("TheGame");
     }

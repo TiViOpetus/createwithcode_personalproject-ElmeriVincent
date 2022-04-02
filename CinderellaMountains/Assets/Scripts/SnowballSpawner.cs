@@ -16,7 +16,7 @@ public class SnowballSpawner : MonoBehaviour
 			Vector3 pos = Random.onUnitSphere * spawnDistance;
 			Instantiate(snowball, pos, Quaternion.identity);
 
-			yield return new WaitForSeconds(2f);
+			yield return new WaitForSeconds(5f);
 
 			StartCoroutine(SpawnSnowball());
 		}

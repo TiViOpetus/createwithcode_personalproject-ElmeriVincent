@@ -8,6 +8,7 @@ public class ItemSpawner : MonoBehaviour
 	public bool spawning = true;
 
 	private float spawnDistance = 1f;
+	public float spawnSpeed = 12f;
 
 	public IEnumerator SpawnItem()
 	{
@@ -16,7 +17,7 @@ public class ItemSpawner : MonoBehaviour
 			Vector3 pos = Random.onUnitSphere * spawnDistance;
 			Instantiate(item, pos, Quaternion.identity);
 
-			yield return new WaitForSeconds(12f);
+			yield return new WaitForSeconds(spawnSpeed);
 
 			StartCoroutine(SpawnItem());
 		}

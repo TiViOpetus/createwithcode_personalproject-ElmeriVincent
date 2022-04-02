@@ -139,3 +139,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   splashParticle: {fileID: 1551494778287644, guid: 63206a6b58e89d74483b27ded7f2e41c, type: 3}
+  splashSound: {fileID: 0}

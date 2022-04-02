@@ -5,6 +5,12 @@ using UnityEngine;
 public class SnowSplash : MonoBehaviour
 {
     public GameObject splashParticle;
+    private AudioController splash;
+
+    void Start()
+    {
+        splash = GameObject.Find("GameController").GetComponent<AudioController>();
+    }
 
     public void OnCollisionEnter(Collision col)
     {
@@ -20,5 +26,6 @@ public class SnowSplash : MonoBehaviour
     void SplashParticleEffect ()
     {
         splashParticle = Instantiate(splashParticle, transform.position, splashParticle.transform.rotation);
+        splash.snowballHit.Play();
     }
 }
