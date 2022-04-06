@@ -5,10 +5,12 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     public Text score;
+    public Text highScore;
     public GameObject bonusScore;
+    private int roundedScore;
     private string scoreText;
 
-    public float scoreAmount;
+    [HideInInspector] public float scoreAmount;
     private float pointIncreased;
     private int addPoints = 20;
 
@@ -16,6 +18,7 @@ public class Score : MonoBehaviour
     private ObstacleSpawner spawnPeriodTime2;
 
     public bool endGame = false;
+
 
     void Awake() 
     {
@@ -25,8 +28,8 @@ public class Score : MonoBehaviour
         pointIncreased = 10f;
     }
 
-    // Displays the score
 
+    // LiveScore, bonusScore, highScore
     void Update()
     {
         if(endGame == false)
@@ -34,23 +37,28 @@ public class Score : MonoBehaviour
             scoreText = score.text = (int)scoreAmount + " SP";
             scoreAmount += pointIncreased * Time.deltaTime;
             IncreasingSpawSpeeds();
+            if(scoreAmount > PlayerPrefs.GetInt("HighScore", 0))
+            {
+                PlayerPrefs.SetInt("HighScore", (int)scoreAmount);
+            }
         }
     }
 
-    // When collecting an item increase points;
 
+    // When collecting an item increase points;
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Item") && endGame == false)
         {
             scoreAmount += addPoints;
             bonusScore.SetActive(true);
-            StartCoroutine(ExampleCoroutine());
+            StartCoroutine(BonusScoreActive());
         }
     }
 
+
     // Disables the bonusScore text after a second
-    IEnumerator ExampleCoroutine()
+    IEnumerator BonusScoreActive()
     {
         yield return new WaitForSeconds(1);
         bonusScore.SetActive(false);
